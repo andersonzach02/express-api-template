@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/andersonzach02/express-api-template/issues"
   },
-  "homepage": "https://github.com/andersonzach02/express-api-template#readme"
+  "homepage": "https://github.com/andersonzach02/express-api-template#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "eslint": "^8.3.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  }
 }

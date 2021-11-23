@@ -3,11 +3,13 @@
 ## TODO
 
 - [ ] Install Necessary Dependencies
-  - [ ] Express for creating the API 🪧
-  - [ ] Morgan for logging 🪵
-  - [ ] Supertest for testing routes 🧪
-  - [ ] nodemon for running the server during dev 🏃‍♂️
-  - [ ] ESLint for ES6 JS linting 🧹
+  - [x] Express for creating the API 🪧
+  - [x] Morgan for logging 🪵
+  - [x] Supertest for testing routes 🧪
+  - [x] nodemon for running the server during dev 🏃‍♂️
+  - [x] ESLint for ES6 JS linting 🧹
+  - [x] Dotenv for storing environment variables
+  - [x] Helmet for CORS headers
   - [ ] More? Do some research, make sure you aren't missing anything 🔬
 - [ ] Setup necessary configuration for modules (like ESLint specifically)
 - [ ] Set up basic routes
