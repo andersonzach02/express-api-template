@@ -1,8 +1,9 @@
 require('dotenv').config();
 const express = require('express');
 const winston = require('winston');
+const morgan = require('morgan');
 
-const logger = winston.createLogger({
+const winstonLogger = winston.createLogger({
   level: 'info',
   format: winston.format.json(),
   transports: [
@@ -15,22 +16,29 @@ const logger = winston.createLogger({
 });
 
 if (process.env.NODE_ENV !== 'production') {
-  logger.add(
+  winstonLogger.add(
     new winston.transports.Console({
       format: winston.format.simple(),
+      colorize: true,
     }),
   );
 }
 
+winstonLogger.stream = {
+  write(message) {
+    winstonLogger.info(message);
+  },
+};
+
 const app = express();
+app.use(morgan('combined', { stream: winstonLogger.stream }));
 
 app.get('/', (req, res) => {
-  res.send(404);
+  res.send({ message: 'Hello World! 👋🌍' });
 });
 
 app.listen(process.env.PORT, () => {
-  logger.log(
-    'info',
+  winstonLogger.info(
     `Server is now listening on http://localhost:${process.env.PORT}`,
   );
 });
