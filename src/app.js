@@ -6,9 +6,14 @@ const cors = require('cors');
 const logger = require('../logger');
 const middlewares = require('./middlewares');
 
+const home = require('./api/index');
+
 const app = express();
 
-app.use(morgan('combined', { stream: logger.stream.write }));
+if (process.env.NODE_ENV !== 'test') {
+  app.use(morgan('combined', { stream: logger.stream.write }));
+}
+
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
@@ -16,6 +21,8 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send({ message: 'Hello World! 👋🌍' });
 });
+
+app.use('/api/v1', home);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
