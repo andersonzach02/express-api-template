@@ -10,7 +10,7 @@
 		"start": "node src/index.js",
 		"dev": "nodemon src/index.js",
 		"test": "jest",
-		"lint": "eslint --fix src test logger.js"
+		"lint": "eslint --fix src test utils"
 	},
 	"repository": {
 		"type": "git",

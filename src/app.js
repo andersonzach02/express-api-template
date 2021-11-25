@@ -3,7 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
-const logger = require('../logger');
+const logger = require('../utils/logger');
 const middlewares = require('./middlewares');
 
 const home = require('./api/index');
