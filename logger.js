@@ -10,8 +10,13 @@ const winstonLogger = winston.createLogger({
     }),
     new winston.transports.File({ filename: './logs/combined.log' }),
   ],
+  stream: {
+    write: (message) => {
+      winstonLogger.http(message);
+    },
+  },
 });
-exports.winstonLogger = winstonLogger;
+
 if (process.env.NODE_ENV !== 'production') {
   winstonLogger.add(
     new winston.transports.Console({
@@ -20,10 +25,7 @@ if (process.env.NODE_ENV !== 'production') {
     }),
   );
 }
-winstonLogger.stream = {
-  write(message) {
-    winstonLogger.info(message);
-  },
-};
 
-module.exports = winstonLogger;
+module.exports = {
+  logger: winstonLogger,
+};
