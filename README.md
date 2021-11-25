@@ -17,10 +17,10 @@
   - [x] More? Do some research, make sure you aren't missing anything 🔬
 
 - [x] Setup necessary configuration for modules (like ESLint specifically)
-- [ ] Set up basic routes
-  - [ ] Create an express application object through express module 🚅
-  - [ ] Require in necessary middlewares
-  - [ ] Create basic error/not found middlewares 🛑
-  - [ ] Create GET on home route 🏡
-- [ ] Create tests for those basic routes
+- [x] Set up basic routes
+  - [x] Create an express application object through express module 🚅
+  - [x] Require in necessary middlewares
+  - [x] Create basic error/not found middlewares 🛑
+  - [x] Create GET on home route 🏡
+- [x] Create tests for those basic routes
 - [ ] Add description for this project and repository 📜
