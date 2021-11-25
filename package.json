@@ -4,7 +4,10 @@
 	"description": "This is a template for an express api that I can use to create basic express apps in the future rather than starting from scratch.",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "node src/index.js",
+		"dev": "nodemon src/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint --fix src"
 	},
 	"repository": {
 		"type": "git",
@@ -20,7 +23,7 @@
 		"dotenv": "^10.0.0",
 		"express": "^4.17.1",
 		"helmet": "^4.6.0",
-		"morgan": "^1.10.0"
+		"winston": "^3.3.3"
 	},
 	"devDependencies": {
 		"eslint": "^8.3.0",
