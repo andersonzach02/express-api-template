@@ -11,9 +11,9 @@ const winstonLogger = winston.createLogger({
     new winston.transports.File({ filename: './logs/combined.log' }),
   ],
   stream: {
-    write: (message) => {
-      winstonLogger.http(message);
-    },
+    /* eslint-disable object-shorthand, func-names */
+    write: (message) => winstonLogger.http(message),
+    /* eslint-enable object-shorthand, func-names */
   },
 });
 

@@ -6,7 +6,7 @@ const cors = require('cors');
 const { logger } = require('../logger');
 
 const app = express();
-app.use(morgan('combined', { stream: logger.stream }));
+app.use(morgan('combined', { stream: logger.stream.write }));
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
