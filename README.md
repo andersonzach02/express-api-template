@@ -12,6 +12,7 @@
   - [x] ESLint for ES6 JS linting 🧹
   - [x] Dotenv for storing environment variables
   - [x] Helmet for CORS headers
+  - [x] CORS for cross origin resource sharing
   - [x] More? Do some research, make sure you aren't missing anything 🔬
 
 - [x] Setup necessary configuration for modules (like ESLint specifically)

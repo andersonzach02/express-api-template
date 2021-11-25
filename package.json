@@ -7,7 +7,7 @@
 		"start": "node src/index.js",
 		"dev": "nodemon src/index.js",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"lint": "eslint --fix src"
+		"lint": "eslint --fix src logger.js"
 	},
 	"repository": {
 		"type": "git",
@@ -20,6 +20,7 @@
 	},
 	"homepage": "https://github.com/andersonzach02/express-api-template#readme",
 	"dependencies": {
+		"cors": "^2.8.5",
 		"dotenv": "^10.0.0",
 		"express": "^4.17.1",
 		"helmet": "^4.6.0",
